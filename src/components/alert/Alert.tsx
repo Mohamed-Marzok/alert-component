@@ -1,18 +1,19 @@
-import { Bell, X } from "lucide-react";
+import { X } from "lucide-react";
 import "./alert.scss";
 import { ReactNode, useState } from "react";
+import { aleartType } from "../../types/type";
 
 interface Iprops {
   title: string;
   description: string;
   icon: ReactNode;
-  className: string;
+  className: aleartType;
 }
 export default function Alert({
   title,
   description,
   icon,
-  className = "aleart-error",
+  className = "alert-error",
 }: Iprops) {
   const [open, setOpen] = useState(true);
   const closeAleartHandle = () => {
